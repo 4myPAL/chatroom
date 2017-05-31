@@ -68,16 +68,16 @@ class App {
               $input.val("");
               return
             }
+            if ($input.val().indexOf("B:") == 0){
+              channel.push("add:bad_words", {word: contentArray[1]})
+              $input.val("");
+              return
+            }
             if ($input.val().indexOf("VX:") == 0){  
               channel.push("view:ban_reason", {userNumber: contentArray[1] })
               $input.val("");
               return
             }
-          }
-          if (username == "用户" || username == "Member"){
-            channel.push("update:name", {template: "请修改昵称后再发言" })
-            $input.val("");
-            return
           }
           channel.push("new:msg", {body: $input.val()})
           $input.val("");
@@ -125,8 +125,8 @@ class App {
         case  "update_top_notice":
           msg.body = "聊天室置顶公告设置成功,刷新查看"
           break;
-        case  "update_name":
-          msg.body = "请修改昵称后再发言"
+        case  "add_bad_word":
+          msg.body = "添加敏感词成功"
           break;
         case  "remove_ban":
           msg.body = "用户「"+msg.ban_name+"」已被解禁"
