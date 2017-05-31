@@ -93,7 +93,7 @@ defmodule Chat.RoomChannel do
     {:ok, ban_time} = Redis.command(~w(TTL #{socket.assigns[:user_number]}:ban ))
     if ban_time < 0 do
       {:ok, bad_words} = Redis.command(~w(SMEMBERS bad_words))
-      if socket.assigns[:is_admin] == false && (socket.assigns[:username] == "Member" || contain_bad_words(bad_words, socket.assigns[:username])) do
+      if socket.assigns[:is_admin] == false && (socket.assigns[:username] == gettext("Member") || contain_bad_words(bad_words, socket.assigns[:username])) do
         push socket, "new:msg", %{name: gettext("admin"), is_admin: "true", body: gettext("Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement.")}
         {:stop, %{reason: "nickname validate"}, :ok, socket}
       else
