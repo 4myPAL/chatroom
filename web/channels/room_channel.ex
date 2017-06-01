@@ -97,7 +97,7 @@ defmodule Chat.RoomChannel do
         push socket, "new:msg", %{name: gettext("admin"), is_admin: "true", body: gettext("Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement.")}
         {:stop, %{reason: "nickname validate"}, :ok, socket}
       else
-        clean_content = replace_bad_words(bad_words, msg["body"])
+        clean_content = replace_bad_words(bad_words, String.replace(msg["body"], " ", ""))
         {:ok, last_content} = Redis.command(~w(HMGET #{socket.assigns[:user_number]} content))
         if socket.assigns[:is_admin] == false && Base.encode64(clean_content) == List.first(last_content) do
           push socket, "new:msg", %{name: gettext("admin"), is_admin: "true", body: gettext("Repeated statements are forbidden.")}
