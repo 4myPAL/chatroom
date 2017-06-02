@@ -10,10 +10,6 @@
 msgid ""
 msgstr ""
 
-#: web/templates/page/index.html.eex:8
-msgid "You need to pass the KYC and deposit at least once If you want to chat"
-msgstr ""
-
 #: web/channels/room_channel.ex:119
 msgid "You can make a statement after %{hour} hours!"
 msgstr ""
@@ -33,4 +29,12 @@ msgstr ""
 
 #: web/channels/room_channel.ex:96
 msgid "Member"
+msgstr ""
+
+#: web/templates/page/index.html.eex:8
+msgid "Before using the chatroom, make sure you pass the KYC and deposit at least once"
+msgstr ""
+
+#: web/templates/page/index.html.eex:5
+msgid "Press enter to send messages, click the chatroom icon to open another window"
 msgstr ""

@@ -2,10 +2,10 @@
 <div class="history"></div>
 <div class="message">
   <%= if @is_signin do %>
-    <input class="content" placeholder="回车发送聊天内容，点击聊天室图标有惊喜！"  />
+    <input class="content" placeholder="<%= gettext "Press enter to send messages, click the chatroom icon to open another window"%>"  />
   <% else %>
     <div class="visitor">
-      <%= gettext "You need to pass the KYC and deposit at least once If you want to chat" %>
+      <%= gettext("Before using the chatroom, make sure you pass the KYC and deposit at least once")%>
     </div>
   <% end %>
 </div>

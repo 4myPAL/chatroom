@@ -11,4 +11,7 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
+config :chat, Chat.Gettext,
+  default_locale: "zh-CN"
+
 import_config "#{Mix.env}.exs"
