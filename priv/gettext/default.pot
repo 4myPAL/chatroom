@@ -27,10 +27,6 @@ msgstr ""
 msgid "Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement."
 msgstr ""
 
-#: web/channels/room_channel.ex:96
-msgid "Member"
-msgstr ""
-
 #: web/templates/page/index.html.eex:8
 msgid "Before using the chatroom, make sure you pass the KYC and deposit at least once"
 msgstr ""

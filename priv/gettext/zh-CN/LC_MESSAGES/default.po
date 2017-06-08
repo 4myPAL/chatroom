@@ -27,10 +27,6 @@ msgstr "禁止重复发言"
 msgid "Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement."
 msgstr "你的昵称包含敏感词汇，请前往我的账户页面修改昵称后再发言"
 
-#: web/channels/room_channel.ex:96
-msgid "Member"
-msgstr "用户"
-
 #: web/templates/page/index.html.eex:8
 msgid "Before using the chatroom, make sure you pass the KYC and deposit at least once"
 msgstr "使用聊天室需要通过身份认证并有充值记录"
