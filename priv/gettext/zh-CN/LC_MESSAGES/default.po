@@ -10,20 +10,21 @@ msgid ""
 msgstr ""
 "Language: zh-CN\n"
 
-#: web/channels/room_channel.ex:119
+#: web/channels/room_channel.ex:124
 msgid "You can make a statement after %{hour} hours!"
 msgstr "你可以在%{hour}小时后发言"
 
-#: web/channels/room_channel.ex:97 web/channels/room_channel.ex:103
-#: web/channels/room_channel.ex:119
+#: web/channels/room_channel.ex:101 web/channels/room_channel.ex:106
+#: web/channels/room_channel.ex:110 web/channels/room_channel.ex:124
+#: web/channels/room_channel.ex:130
 msgid "admin"
 msgstr "管理员"
 
-#: web/channels/room_channel.ex:103
+#: web/channels/room_channel.ex:130
 msgid "Repeated statements are forbidden."
 msgstr "禁止重复发言"
 
-#: web/channels/room_channel.ex:97
+#: web/channels/room_channel.ex:101
 msgid "Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement."
 msgstr "你的昵称包含敏感词汇，请前往我的账户页面修改昵称后再发言"
 
@@ -34,3 +35,11 @@ msgstr "使用聊天室需要通过身份认证并有充值记录"
 #: web/templates/page/index.html.eex:5
 msgid "Press enter to send messages, click the chatroom icon to open another window"
 msgstr "使用回车键发送消息，点击聊天室图标有惊喜！"
+
+#: web/channels/room_channel.ex:106
+msgid "Every five seconds made a statement."
+msgstr "每五秒钟可发一次言"
+
+#: web/channels/room_channel.ex:110
+msgid "The length of the words can not be greater than 100."
+msgstr "发言的长度不能大于100个字"

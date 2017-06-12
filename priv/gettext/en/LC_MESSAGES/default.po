@@ -10,20 +10,21 @@ msgid ""
 msgstr ""
 "Language: en\n"
 
-#: web/channels/room_channel.ex:119
+#: web/channels/room_channel.ex:124
 msgid "You can make a statement after %{hour} hours!"
 msgstr ""
 
-#: web/channels/room_channel.ex:97 web/channels/room_channel.ex:103
-#: web/channels/room_channel.ex:119
+#: web/channels/room_channel.ex:101 web/channels/room_channel.ex:106
+#: web/channels/room_channel.ex:110 web/channels/room_channel.ex:124
+#: web/channels/room_channel.ex:130
 msgid "admin"
 msgstr ""
 
-#: web/channels/room_channel.ex:103
+#: web/channels/room_channel.ex:130
 msgid "Repeated statements are forbidden."
 msgstr ""
 
-#: web/channels/room_channel.ex:97
+#: web/channels/room_channel.ex:101
 msgid "Your nickname includes sensitive words, please visit accounts page to change your nickname before making a statement."
 msgstr ""
 
@@ -33,4 +34,12 @@ msgstr ""
 
 #: web/templates/page/index.html.eex:5
 msgid "Press enter to send messages, click the chatroom icon to open another window"
+msgstr ""
+
+#: web/channels/room_channel.ex:106
+msgid "Every five seconds made a statement."
+msgstr ""
+
+#: web/channels/room_channel.ex:110
+msgid "The length of the words can not be greater than 100."
 msgstr ""
