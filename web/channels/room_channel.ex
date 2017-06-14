@@ -102,7 +102,7 @@ defmodule Chat.RoomChannel do
         {:stop, %{reason: "nickname validate"}, :ok, socket}
       else
         {:ok, last_timestamp} = Redis.command(~w(HMGET #{socket.assigns[:user_number]} timestamp))
-        if (timestamp()-String.to_integer(List.first(last_timestamp))) < 5 do
+        if List.first(last_timestamp) && (timestamp()-String.to_integer(List.first(last_timestamp))) < 5 do
           push socket, "new:msg", %{name: gettext("admin"), is_admin: "true", body: gettext("Every five seconds made a statement.")}
           {:stop, %{reason: "talk too often"}, :ok, socket}
         else
